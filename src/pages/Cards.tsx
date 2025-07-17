@@ -1,11 +1,13 @@
-import React from 'react';
+
+import { useState } from 'react';
+
 import { useNavigate } from 'react-router-dom';
 import { FaRegCreditCard } from 'react-icons/fa';
 import { MdCreditCard, MdAtm } from 'react-icons/md';
 
 const Cards = () => {
   const navigate = useNavigate();
-  const [showAdd, setShowAdd] = React.useState(false);
+  const [showAdd, setShowAdd] = useState(false);
   return (
     <div style={{ background: '#f7f7fa', minHeight: '100vh', width: '100vw', fontFamily: 'Montserrat, Arial, sans-serif', fontSize: 15 }}>
       {/* Header */}
