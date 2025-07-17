@@ -2,6 +2,7 @@ import { useState, useRef, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaUserCircle } from 'react-icons/fa';
 import { MdConfirmationNumber } from 'react-icons/md';
+import type { TouchEvent } from 'react';
 
 const tabList = [
   { id: 'current', label: 'Current' },
@@ -24,13 +25,13 @@ const Tickets = () => {
   }, []);
 
   // Xử lý pull-to-refresh cho tab Đã huỷ
-  const handleTouchStart = (e: React.TouchEvent<HTMLDivElement>) => {
+  const handleTouchStart = (e: TouchEvent<HTMLDivElement>) => {
     if (tab === 'cancelled' && window.scrollY === 0) {
       startY.current = e.touches[0].clientY;
       pulling.current = true;
     }
   };
-  const handleTouchMove = (e: React.TouchEvent<HTMLDivElement>) => {
+  const handleTouchMove = (e: TouchEvent<HTMLDivElement>) => {
     if (!pulling.current || refreshing) return;
     const deltaY = e.touches[0].clientY - (startY.current ?? 0);
     if (deltaY > 60) {
@@ -200,4 +201,4 @@ const Tickets = () => {
   );
 };
 
-export default Tickets; 
+export default Tickets;

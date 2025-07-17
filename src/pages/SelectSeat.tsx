@@ -1,3 +1,4 @@
+import type { ReactNode, FC } from 'react';
 import { useState, useEffect } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Button } from '../components/ui/button';
@@ -519,7 +520,7 @@ function flattenNoiseMatrixForCoaches6to10_strictOrder() {
 }
 
 // Custom handle nhỏ cho slider
-const CustomHandle = (node: React.ReactNode, props: any) => {
+const CustomHandle = (node: ReactNode, props: any) => {
   const { dragging } = props;
   return (
     <div
@@ -545,7 +546,7 @@ const CustomHandle = (node: React.ReactNode, props: any) => {
   );
 };
 
-const SelectSeat: React.FC = () => {
+const SelectSeat: FC = () => {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
 
@@ -1960,4 +1961,4 @@ useEffect(() => {
   );
 };
 
-export default SelectSeat; 
+export default SelectSeat;

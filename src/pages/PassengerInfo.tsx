@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import type { FormEvent } from 'react';
 
 const PassengerInfo = () => {
   const [name, setName] = useState('');
@@ -14,7 +15,7 @@ const PassengerInfo = () => {
   const departDate = ticketInfo.departDate || '';
   const totalPassengers = ticketInfo.totalPassengers || 1;
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
     if (!name.trim() || !cccd.trim()) {
       setError('Please enter full name and ID number.');
@@ -66,4 +67,4 @@ const PassengerInfo = () => {
   );
 };
 
-export default PassengerInfo; 
+export default PassengerInfo;

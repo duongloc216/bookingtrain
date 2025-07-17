@@ -7,6 +7,7 @@ import elderlyIcon from '../assets/elderly.png';
 import studentIcon from '../assets/student.png';
 import unionIcon from '../assets/union member.png';
 import logoRailway from '../assets/logo-railway.png';
+import type { ChangeEvent } from 'react';
 
 interface Station {
   name: string;
@@ -364,7 +365,7 @@ const Main = () => {
   }
 
   // CustomCheckbox component
-  const CustomCheckbox = ({ checked, onChange }: { checked: boolean; onChange: (e: React.ChangeEvent<HTMLInputElement>) => void }) => (
+  const CustomCheckbox = ({ checked, onChange }: { checked: boolean; onChange: (e: ChangeEvent<HTMLInputElement>) => void }) => (
     <label style={{ position: 'relative', display: 'inline-block', width: 24, height: 24, marginRight: 8, cursor: 'pointer' }}>
       <input
         type="checkbox"
@@ -1131,4 +1132,4 @@ const Main = () => {
   );
 };
 
-export default Main; 
+export default Main;
