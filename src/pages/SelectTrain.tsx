@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Button from '../components/Button';
 import Card from '../components/Card';
 import styles from './SelectTrain.module.css';
@@ -80,7 +80,7 @@ const SelectTrain = () => {
         </div>
         {/* Ticket list */}
         <div className={styles.ticketList}>
-          {tickets.map((ticket, idx) => (
+          {tickets.map((ticket) => (
             <Card className={styles.ticketCard} key={ticket.id}>
               {ticket.best && <div className={styles.bestLabel}>Chọn vé đi Hồ Chí Minh tốt nhất</div>}
               <div className={styles.ticketRow}>
