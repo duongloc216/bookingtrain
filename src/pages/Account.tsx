@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaStar, FaGift, FaCreditCard, FaRegCommentDots, FaCog, FaQuestionCircle, FaUserFriends, FaLock } from 'react-icons/fa';
 import { MdOutlineRateReview } from 'react-icons/md';

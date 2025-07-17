@@ -1,4 +1,3 @@
-import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaGift, FaTag, FaInfoCircle } from 'react-icons/fa';
 
